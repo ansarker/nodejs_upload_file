@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Uploading files to dropbox</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <script src="/assets/lib/jquery/jquery-3.3.1.js"></script>
+  <script src="/assets/lib/jquery/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+  <div class="box">
+    <h1 class="header">Upload File to Dropbox Using Nodejs, JQuery</h1>
+    <hr class="horizontal-line" />
+    <div class="pp-auth">
+      <p class="access-token">
+        <strong>Token: </strong>
+        << Generate from dropbox app console>>
+      </p>
+      <div class="picture"><img src="" id="photo" class="photo" /></div>
+    </div>
+    <form class="form-control" enctype="multipart/form-data">
+      <input type="text" class="input-form" name="accesstoken" id="token" placeholder="Access Token" />
+      <input type="file" class="input-form" name="file" onchange="previewPhoto()" id="file" />
+      <button type="submit" class="upload-btn" id="dropbox-btn">Dropbox Upload</button>
+    </form>
+  </div>
+  <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
