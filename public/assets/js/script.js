@@ -46,7 +46,6 @@ $("#dropbox-btn").click(function() {
   var formData = new FormData();
   formData.append("file", inputFile, inputFile.name);
   formData.append("token", ACCESS_TOKEN);
-  formData.append("caption", $("#caption").val());
 
   $.ajax({
     method: "POST",
@@ -55,7 +54,7 @@ $("#dropbox-btn").click(function() {
     processData: false,
     contentType: false,
     success: function() {
-      location.reload();
+      alert('File uploaded to dropbox');
     }
   });
   return false;
